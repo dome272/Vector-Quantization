@@ -48,3 +48,13 @@ These images can be found in the "results" folder.
 
 ### Acknowledgements
 A lot of code has been taken from the [official VQ-VAE implementation](https://github.com/ritheshkumar95/pytorch-vqvae) and from [lucidrains implementation](https://github.com/lucidrains/vector-quantize-pytorch).
+ ```bibtex
+ @misc{oord2018neural,
+    title   = {Neural Discrete Representation Learning},
+    author  = {Aaron van den Oord and Oriol Vinyals and Koray Kavukcuoglu},
+    year    = {2018},
+    eprint  = {1711.00937},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.LG}
+}
+ ```
