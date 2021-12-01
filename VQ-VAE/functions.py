@@ -14,7 +14,7 @@ class VQ(Function):
 
             # calc distances -> (codebook - inputs)**2 = codebook**2 - 2*codebook*inputs + inputs**2
             # = codebook_sqr + inputs_sqr - 2 * (codebook_sqr @ inputs_sqr)
-            distances = torch.addmm(codebook_sqr + inputs_sqr, inputs_flatten, codebook.t(), alpha=1.0, beta=-2.0)
+            distances = torch.addmm(codebook_sqr + inputs_sqr, inputs_flatten, codebook.t(), alpha=-2.0, beta=1.0)
             # distances = codebook_sqr + inputs_sqr - 2 * (inputs_flatten @ codebook.t())
 
             indices = torch.min(distances, dim=1)[1].view(*inputs_size[:-1])
